@@ -6,12 +6,13 @@ class binary_heap
 { private:
     int n_items;
     vector <int> heap;
-    void order_up(int);
-    void order_down(int);
-    void swap(int, int);
+    void order_up(int index);
+    void order_down(int indx);
+    void swap(int index_one, int index_two);
     int max(int, int);
   public:
       binary_heap();
+      binary_heap(int size);
       ~binary_heap() { }
     int get_apex();
     int pop();
@@ -28,6 +29,10 @@ binary_heap::binary_heap()
   //          2     3
   //         4 5   6 7
   // n_items = index of next element to be added
+  n_items = 1; }
+
+binary_heap::binary_heap(int size)
+{ heap.resize(size); 
   n_items = 1; }
 
 void binary_heap::add_to_heap(int a)
