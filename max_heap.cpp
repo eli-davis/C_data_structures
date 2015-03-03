@@ -7,9 +7,9 @@ class binary_heap
     int n_items;
     vector <int> heap;
     void order_up(int index);
-    void order_down(int indx);
+    void order_down(int index);
     void swap(int index_one, int index_two);
-    int max(int, int);
+    int max(int index_one, int index_two);
   public:
       binary_heap();
       binary_heap(int size);
