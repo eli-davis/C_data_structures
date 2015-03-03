@@ -8,9 +8,10 @@ class binary_heap
     void order_up(int index);
     void order_down(int index);
     void swap(int index_one, int index_two);
-    int min(int, int);
+    int min(int index_one, int index_two);
   public:
       binary_heap();
+      binary_heap(int size);
       ~binary_heap() { }
     int get_apex();
     int pop();
@@ -27,6 +28,10 @@ binary_heap::binary_heap()
   //          2     3
   //         4 5   6 7
   // n_items = index of next element to be added
+  n_items = 1; }
+  
+binary_heap::binary_heap(int size)
+{ heap.resize(size); 
   n_items = 1; }
 
 void binary_heap::add_to_heap(int a)
@@ -105,4 +110,3 @@ void test_run(int N)
 
 int main()
 { test_run(20); }
-
