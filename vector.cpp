@@ -75,7 +75,6 @@ template<typename T> void Vector<T>::print()
       cout << endl;
     cout << A[i] << " "; } }
 
-
 int test1()
 { Vector<int> A(13);
   A.set(12, 15);
