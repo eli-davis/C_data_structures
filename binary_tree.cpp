@@ -1,6 +1,5 @@
 #include <iostream>
 
-
 string to_lower(string s)
 { for (int i = 0; s[i]; i += 1)
     if (s[i] >= 'A' && s[i] <= 'Z')
