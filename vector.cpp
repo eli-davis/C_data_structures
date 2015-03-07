@@ -49,15 +49,6 @@ template<typename T> void Vector<T>::set(int pos, T value)
     resize(2 * size);
   A[pos] = value; }
 
-
-template<typename T> void Vector<T>::set(int pos, T value)
-{ if (pos < 0 || pos > size)
-  { cerr << "out of bounds Vector write\n";
-    exit(1);  }
-  if (pos == size)
-    resize(2 * size);
-  A[pos] = value; }
-
 template<typename T> void Vector<T>::resize(int new_size)
 { int old_size = size;
   T * old_A = A;
