@@ -16,7 +16,6 @@ class binary_heap
     int get_apex();
     int pop();
     void add_to_heap(int);
-    int get_size();
     int get_number_of_items();
     void print();
 };
@@ -71,9 +70,6 @@ void binary_heap::order_down(int index)
   if (heap.at(min_child) < heap.at(index))
   { swap(index, min_child);
     order_down(min_child); } }
-
-int binary_heap::get_size()
-{ return heap.size(); }
 
 int binary_heap::get_number_of_items()
 { return n_items-1; }
