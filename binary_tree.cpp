@@ -56,15 +56,14 @@ int binary_tree::size()
 { return n_items; }
 
 void binary_tree::add(string s)
-{ if (root)
+{ n_items += 1;
+  if (root)
     add(s, root);
   else
-  { root = create_node(s);
-    n_items = 1; } }
+    root = create_node(s); }
 
 node * binary_tree::add(string s, node * n)
-{ n_items += 1;
-  if (!n)
+{ if (!n)
     return create_node(s);
   else if (to_lower(s) < to_lower(n->s))
     n->left = add(s, n->left);
@@ -106,7 +105,7 @@ void test_one()
   B.add("random");
   B.add("zzzz");
   B.print();
-  cout << "\n\n";
+  cout << "\ntree has " << B.size() << " items\n\n";
   string x = "yoo";
   if (B.is_in_tree(x))
     cout << x << " IN TREE\n";
